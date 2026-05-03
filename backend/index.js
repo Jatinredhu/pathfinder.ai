@@ -8,7 +8,9 @@ import roadmapRoutes from './routes/roadmaps.js'
 dotenv.config()
 
 const app = express()
-app.use(cors())
+app.use(cors({
+  origin: 'https://pathfinder-ai-five-liart.vercel.app'
+}))
 app.use(express.json())
 
 connectDB()
